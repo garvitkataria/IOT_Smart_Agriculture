@@ -5,15 +5,15 @@ from Crop_Type.models import Crop
 class Sensor(models.Model):
 	crop = models.ForeignKey(Crop, on_delete=models.CASCADE, related_name='crop')
 	sensor_types = (
-        ('WL', 'Water Level'),
-        ('TS', 'Turbidity Sensor'),
-        ('Temp', 'Temperature'),
-        ('SM', 'Soil Moisture'),
-        ('HDT', 'Humidity'),
-        ('Act', 'Actuator')
+        ('Water Level', 'Water Level'),
+        ('Turbidity', 'Turbidity'),
+        ('Temperature', 'Temperature'),
+        ('Soil Moisture', 'Soil Moisture'), 
+        ('Humidity', 'Humidity'),
+        ('Actuator', 'Actuator')
 	)
-	sensor_type = models.CharField(max_length=20, choices=sensor_types, default='Temp')
-	location = models.FloatField(default=0.00)
+	sensor_type = models.CharField(max_length=20, choices=sensor_types, default='Temperature')
+	longitude = models.FloatField(default=0.00)
 	latitude = models.FloatField(default=0.00)
 	created_on = models.DateTimeField(auto_now_add=True)
 

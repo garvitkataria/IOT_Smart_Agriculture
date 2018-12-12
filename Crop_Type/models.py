@@ -6,20 +6,20 @@ from Farm.models import Farm
 class Crop(models.Model):
 	farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm')
 	CROP_TYPES = (
-        ('KC', 'Kharif crops'),
-        ('RC', 'Rabi Crops'),
-        ('ZC', 'Zaid Crop'),
-        ('R', 'Rice'),
-        ('W', 'Wheat'),
-        ('P', 'Pulses'),
-        ('SC', 'Sugarcane'),
-        ('CT', 'Cotton'),
-        ('GN', 'Groundnut'),
-        ('T', 'Tea'),
-        ('CF', 'Coffee')
+        ('Kharif crops', 'Kharif crops'),
+        ('Rabi Crops', 'Rabi Crops'),
+        ('Zaid Crop', 'Zaid Crop'),
+        ('Rice', 'Rice'),
+        ('Wheat', 'Wheat'),
+        ('Pulses', 'Pulses'),
+        ('Sugarcane', 'Sugarcane'),
+        ('Cotton', 'Cotton'),
+        ('Groundnut', 'Groundnut'),
+        ('Tea', 'Tea'),
+        ('Coffee', 'Coffee')
     )
-	crop_type = models.CharField(max_length=20, choices=CROP_TYPES, default='1')
-	location = models.FloatField(default=0.00)
+	crop_type = models.CharField(max_length=20, choices=CROP_TYPES, default='Pulses')
+	longitude = models.FloatField(default=0.00)
 	latitude = models.FloatField(default=0.00)
 	created_on = models.DateTimeField(auto_now_add=True)
 
