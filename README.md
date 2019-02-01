@@ -26,6 +26,7 @@
 
 So the server will run on the localhost.
 <h3>Angular Server:</h3> https://github.com/garvitkataria/IOT_Smart_Agriculture_Angular
+<h3>YouTube Link:</h3>: https://youtu.be/eDg2UW-1EYI
 
 # Internet of Things 
 ### Project Title: IOT Based Smart Agriculture
